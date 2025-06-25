@@ -1,0 +1,83 @@
+body {
+  font-family: "Poppins", sans-serif !important;
+  box-sizing: border-box;
+  overflow-x: hidden !important;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+section{
+    padding: 50px;
+
+}
+
+section h1{
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+section h2{
+    text-align: center;
+    font-weight: 600;
+}
+
+input{
+    height: 50px;
+    border-color: black !important;
+    border-radius: 0 !important;
+}
+
+.check_box{
+    height: 15px !important;
+
+}
+
+.sign_in_link{
+    text-align: right;
+}
+
+.sign_in_link a{
+    text-decoration: none;
+    color: #056005;
+}
+
+.btn{
+    background-color: #1e73be !important;
+    color: white !important;
+    border: none !important;
+    font-size: 17px !important;
+}
+
+@media screen and (max-width: 987px) {
+  section{
+    padding: 50px 10px;
+  }
+
+}
+
+.password_div{
+    position: relative;
+}
+
+.cpassword_div{
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.eye-icon:hover {
+    color: #000;
+}
+

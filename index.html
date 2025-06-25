@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESD Homepage</title>
+
+    <!-- Documents Links  -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+   <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="images/lasued_logo.png" alt="Logo" width="30" height="30">
+            </a>
+
+            <!-- Toggler button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Login & Register buttons -->
+                <div class="d-flex flex-column flex-lg-row ms-lg-auto gap-2 mt-3 mt-lg-0">
+                    <button class="btn login" id="loginBtn" type="button">Login</button>
+                    <button class="btn register" id="registerBtn" type="button">Register</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="register_modal" id="registerModal">
+
+        <div class="modal_content">
+            <div class="as_school">
+                <img src="images/school.png" alt="">
+                <a href="#">Register As a School</a>
+            </div>
+            <hr>
+            <div class="as_professional">
+                <img src="images/teacher.png" alt="">
+                <a href="#">Register As a Professional</a>
+            </div>
+            <hr>
+            <div class="as_student">
+                <img src="images/student_icon.png" alt="">
+                <a href="student_reg.html">Register As a Student</a>
+            </div>
+            <hr>
+        </div>
+        
+    </div>
+
+    <div class="login_modal" id="loginModal">
+
+        <div class="modal_content">
+            <div class="as_professional">
+                <img src="images/teacher.png" alt="">
+                <a href="#">Login As a Teacher</a>
+            </div>
+            <hr>
+            <div class="as_student">
+                <img src="images/student_icon.png" alt="">
+                <a href="#">Login As a Student</a>
+            </div>
+            <hr>
+        </div>
+        
+    </div>
+
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+
+                <!-- Left section -->
+                <div class="col-12 col-lg-6 left_home mb-4 mb-lg-0 p-3">
+                    <h1 class="lh-lg pb-3">
+                        DIRECTORATE OF ENTREPRENEURSHIP AND SKILL DEVELOPMENT
+                    </h1>
+                    <p class="fs-4 lh-lg pb-3">
+                        Lagos State University of Education's Directorate of Entrepreneurship and Skills Development, in partnership with the Ministry of Education, is transforming education in Lagos. We're building a database, certifying professionals, and empowering students with entrepreneurship. Join us in shaping the future of education, one step at a time.
+                    </p>
+                    <div class="home_btn">
+                        <button class="btn blue_btn" type="button">Learn More</button>
+                        <button class="btn get_started" type="button">Get Started</button>
+                    </div>
+                </div>
+
+                <!-- Right section -->
+                <div class="col-12 col-lg-5 right_home text-center">
+                    <img src="images/mix.png" alt="" class="mix_img">
+
+                    <div class="img_group">
+                        <img src="images/building.png" alt="">
+                        <img src="images/confrence.png" alt="">
+                        <img src="images/student.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Aim Section -->
+    <section class="aim">
+        <h1>
+            Our Main Aim
+        </h1>
+        <p class="aim-intro">
+            Our main aim is to revolutionize education in Lagos by integrating structured databases, certifying professionals, and empowering students with entrepreneurial skills.
+        </p>
+        <div class="aim_grid">
+
+            <div class="top row align-items-center">
+                <div class="col-12 col-md-4">
+                    <img src="images/1.png" alt="">
+                    <h3>Creativity</h3>
+                    <p>Promoting inventive thinking and a culture of entrepreneurial innovation through risk-taking programs.</p>
+                </div>
+
+                <div class="col-12 col-md-4" >
+                    <img src="images/2.png" alt="">
+                    <h3>Life-long Learning</h3>
+                    <p>Promoting ongoing training, mentorship, and resilience in entrepreneurs at all career stages.</p>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img src="images/3.png" alt="">
+                    <h3>Innovations</h3>
+                    <p>Fostering innovation through coursework, workshops, and projects to empower individuals to create market-driven ventures.</p>
+                </div>
+            </div>
+
+            <div class="bottom row align-items-center">
+                <div class="col-12 col-md-4">
+                    <img src="images/4.png" alt="">
+                    <h3>Community Service</h3>
+                    <p>Highlighting how entrepreneurship helps communities through projects that give back and support local well-being.</p>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img src="images/5.png" alt="">
+                    <h3>Entrepreneur</h3>
+                    <p>Advancing entrepreneurship through research and innovation to inform best practices and policies.</p>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img src="images/6.png" alt="">
+                    <h3>Support Services</h3>
+                    <p>Enhancing entrepreneurship education quality through expert guidance, consultancy, mentor</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- What we Offer Section -->
+    <section class="offer">
+        <h1>
+            What We Offer
+        </h1>
+        <p class="offer-intro">
+            We offer a comprehensive approach to education, including database management, professional certification, and student entrepreneurship programs, all aimed at enhancing the educational landscape in Lagos.
+        </p>
+        <div class="offer_grid">
+            <div class="first_row row align-items-center">
+
+                <div class="offer_container col-12 col-md-5">
+                    <h3>
+                        LAGOS STATE EDUCATIONAL INSTITUTIONS DATA (LASEID)CENTRE
+                    </h3>
+                    <p>
+                        Step into the LASEID Centre, your central platform for effortless registration and robust data management of educational institutions in Lagos State. Tailored to address the unique needs of schools, this modal guarantees a seamless process for annual registration.
+                    </p>
+                    <button class="btn blue_btn read_more">Read More</button>
+                </div>
+
+                <div class="offer_container col-12 col-md-5">
+                    <h3>
+                        LAGOS STATE EDUCATION PROFESSIONAL (LASEP) CERTIFICATE
+                    </h3>
+                    <p>
+                        Our mission is to enhance education and raise professional standards. LASEP is dedicated to fostering excellence in education through diverse, ongoing development opportunities, including workshops, seminars, and online courses. We embrace lifelong learning in today's ever-changing educational world.
+                    </p>
+                    <button class="btn blue_btn read_more" >Read More</button>
+                </div>
+
+            </div>
+
+            <div class="second_row row align-items-center">
+
+                <div class="offer_container col-12 col-md-5">
+                    <h3>
+                        LAGOS STATE UNIVERSITY OF EDUCATION (LASUED) SKILLS
+                    </h3>
+                    <p>
+                        Unlock your potential, acquire new skills, and open doors to a world of opportunities. The LASUED-SKILLS program is your path to personal and professional growth. We offer a diverse range of skills and knowledge for both our undergraduate students and community members eager to learn and grow.
+                    </p>
+                    <button class="btn blue_btn read_more">Read More</button>
+                </div>
+
+                <div class="offer_container col-12 col-md-5">
+                    <h3>
+                        LASUED-DESD ENTREPRENEURSHIP COMPETITIONS
+                    </h3>
+                    <p>
+                        Welcome to the LASUED-DESD Entrepreneurship competitions. Our competitions empower students by nurturing their creativity, fostering entrepreneurial skills, and guiding them towards a successful future. With a strong focus on entrepreneurship and skill development.
+                    </p>
+                    <button class="btn blue_btn read_more ">Read More</button>
+                </div>
+
+            </div>
+
+            <div class="third_row row align-items-center">
+
+                <div class="offer_container col-12 col-md-5">
+                    <h3>
+                        LASUED ENTERPRISE CREATION AND LEADERSHIP (ECL) PROGRAM
+                    </h3>
+                    <p>
+                        Explore the path to dynamic leadership in the business world and turn your entrepreneurial aspirations into reality. Our program is designed for LASUED undergraduates and graduates from other Nigerian institutions. This Senate-approved program is the flagship of entrepreneurship education at our university.
+                    </p>
+                    <button class="btn blue_btn read_more">Read More</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Who we are Section -->
+    <section class="who_we_are">
+        <h1>
+            Who We Are
+        </h1>
+        <p>
+            The Directorate of Entrepreneurship and Skills Development (DESD), approved by the Senate and Council of the University in May 2023, and designed to be a world-class, life-long entrepreneurship learning and development center.
+        </p>
+        <p>
+            Lagos State University of Education (LASUED), as a new University established only in 2022, have deliberately positioned itself to apply unconventional solutions to address the numerous problems of lack of creative, innovative and entrepreneurial skills among our teeming youth, which has led to the huge state of unemployment and joblessness among young Nigerians.
+        </p>
+        <p>
+            In addition, we are resolve to apply ourselves to proffering solutions to the business and economic challenges of our state and nation through entrepreneurship education development.
+        </p>
+        <p>
+            To achieve the above, we are resolved to partner with the corporate organizations around us, as the ultimate consumers of our products (the graduates) in producing the types of graduates that will add value to their organizations and change the dynamics of administration of the nation. This unique vision we strategically set out to achieve through the DESD.
+        </p>
+        
+    </section>
+
+    <!-- contact section -->
+    <section class="contact">
+
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+        
+</body>
+
+
+</html>
