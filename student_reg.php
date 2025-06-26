@@ -59,7 +59,7 @@
                     <span class="eye-icon fas fa-thin fa-eye-slash" id="toggleCPassword"></span>  
                 </div>
 
-                <p class="mt-3 sign_in_link">Already a user? <a href="student_signin.html">Sign in here</a></p>
+                <p class="mt-3 sign_in_link">Already a user? <a href="student_signin.php">Sign in here</a></p>
 
                 <div class="form-check mb-3">
                     <input class="form-check-input check_box" type="checkbox" id="flexCheckDefault" required>
