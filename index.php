@@ -288,7 +288,8 @@
                     <h1>CONTACT US</h1>
                     <h4>Get in touch with Us</h4>
 
-                    <form action="">
+                    <form id="contactForm" onsubmit="return false" autocomplete="off">
+                        <input type="hidden" name="op" value="Contact.contactUs" />
                         <div class="row g-3">
                             <!-- First + Last Name -->
                             <div class="col-md-6">
@@ -310,10 +311,10 @@
                             <div class="col-12">
                                 <textarea name="message" class="form-control " rows="9" placeholder="Your Message"></textarea>
                             </div>
-
+				            <div id="server_mssg"></div>
                             <!-- Submit Button -->
                             <div class="submit_div col-12" >
-                                <input type="submit" class="btn submit_btn" value="SUBMIT NOW" onclick="this.disabled=true;">
+                                <input type="submit" class="btn submit_btn" value="SUBMIT NOW" onclick="contactUs('contactForm');">
                             </div>
                         </div>
                     </form>
@@ -465,13 +466,17 @@
                 Get the latest DESD news delivered to your inbox
             </h1>
 
+        <form id="subscribeForm" onsubmit="return false" autocomplete="off">
+            <input type="hidden" name="op" value="Subscription.subscribeEmail">
             <div class="sub_div">
                 <input type="email" name="sub_email" placeholder="Your Email">
-                <button>
+                <button type="submit" onclick="subscribeUser('subscribeForm');">
                     Subscribe
                     <span class="material-symbols-outlined">arrow_right_alt</span>
                 </button>
             </div>
+            <div id="sub_mssg"></div>
+        </form>
         </div>
 
         <div class="container bottom_footer">
@@ -535,16 +540,77 @@
 
 
 
-
-
-
-
-
-
-
     <!-- Bootstrap JS Link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+    <script src="js/jquery-3.6.0.min.js" ></script>
+	<script src="js/jquery.blockUI.js" ></script>
+	<script src="js/parsely.js" ></script>
+
+	<script src="js/sweet_alerts.js" ></script>
+	<script src="js/main.js"></script>
+    <script>
+    function contactUs(id) {
+        var forms = $('#' + id);
+        forms.parsley().validate();
+        if (forms.parsley().isValid()) {
+            $.blockUI();
+            var data = forms.serialize();
+            $.ajax({
+                type: "post",
+                url: "utilities_default.php",
+                data: data,
+                dataType: "json",
+                beforeSend: function() {
+                    $.blockUI({ message: "Processing..... Please wait..." });
+                },
+                success: function(data) {
+                    $.unblockUI();
+                    $("#server_mssg").html(data.response_message);
+                    if (data.response_code == 0) {
+                        forms[0].reset();
+                    }
+                },
+                error: function() {
+                    $.unblockUI();
+                    $("#server_mssg").html("Unable to process request at the moment! Please try again");
+                }
+            });
+        }
+    }
+</script>
+<script>
+function subscribeUser(id) {
+    var form = $('#subscribeForm');
+    form.parsley().validate();
+    if (form.parsley().isValid()) {
+        $.blockUI();
+        var data = form.serialize();
+        $.ajax({
+            type: "POST",
+            url: "utilities_default.php",
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                $.blockUI({ message: "Subscribing... Please wait..." });
+            },
+            success: function (data) {
+                $.unblockUI();
+                $("#sub_mssg").html(data.response_message);
+                if (data.response_code === 0) {
+                    form[0].reset();
+                }
+            },
+            error: function () {
+                $.unblockUI();
+                $("#sub_mssg").html("Unable to process request. Try again later.");
+            }
+        });
+    }
+}
+</script>
+
+
         
 </body>
 

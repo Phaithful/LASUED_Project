@@ -78,6 +78,43 @@ class dbobject extends validation
         $sql = "UPDATE students SET pin_missed = 0, user_locked = 0 WHERE matric = '$matric_safe'";
         return $this->db_query($sql, false);
     }
+    public function doSelect($fields, $table, $where = [])
+{
+    $fieldList = is_array($fields) ? implode(",", $fields) : $fields;
+    $sql = "SELECT $fieldList FROM `$table`";
+
+    if (!empty($where)) {
+        $sql .= " WHERE ";
+        $conditions = [];
+        foreach ($where as $key => $value) {
+            $safeVal = mysqli_real_escape_string($this->myconn, $value);
+            $conditions[] = "`$key` = '$safeVal'";
+        }
+        $sql .= implode(" AND ", $conditions);
+    }
+
+    return $this->db_query($sql);
+}
+public function subEmail($table, $arr, $exclude = [])
+{
+    $fields = "";
+    $values = "";
+
+    foreach ($arr as $key => $value) {
+        if (!in_array($key, $exclude)) {
+            $fields .= "`$key`,";
+            $values .= "'" . mysqli_real_escape_string($this->myconn, $value) . "',";
+        }
+    }
+
+    $fields = rtrim($fields, ',');
+    $values = rtrim($values, ',');
+
+    $sql = "INSERT INTO `$table` ($fields) VALUES ($values)";
+    file_put_contents('m_query.txt', $sql); // Optional: for debugging
+    return $this->db_query($sql, false);
+}
+
 
 
 }

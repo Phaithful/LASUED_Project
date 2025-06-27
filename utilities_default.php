@@ -9,6 +9,8 @@ setcookie("PHPSESSID", session_id(), 0, $params["path"], $params["domain"],
 include_once("libs/dbfunctions.php");
 
 include('classes/users.php');
+include('classes/contact.php');
+include('classes/subscription.php');
 
 // User.login
 $op = $_REQUEST['op'];
@@ -27,7 +29,10 @@ $data = [$params];
 //////////////////////////////
 /// callling the method of  the class
 $foo = new $operation[0]; // new User();
-echo call_user_func_array(array($foo, trim($operation[1])), $data);// $foo->login($params);
+#echo call_user_func_array(array($foo, trim($operation[1])), $data);// $foo->login($params);
+$response = call_user_func_array(array($foo, trim($operation[1])), $data);
+echo json_encode($response);
+
 //}else
 //{
 //	echo "invalid token";

@@ -40,11 +40,7 @@
 
                 <p class="mt-3 sign_in_link">Not a user? <a href="student_reg.php">Register here</a></p>
 
-<<<<<<< HEAD
-                <input type="submit" class="btn w-100" value="Login" onclick="this.disabled=true;">
-=======
                 <input type="submit" class="btn w-100" value="Login" onclick="loginUser('form1')">
->>>>>>> 12da28963cd6be1e7dbf87659f0cfce7597c2234
             </form>
 
         </div>

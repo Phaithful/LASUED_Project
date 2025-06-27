@@ -41,7 +41,7 @@ $dbobject = new dbobject();
 // }
 
 
-foreach (glob("class/*.php") as $filename) {
+foreach (glob("classes/*.php") as $filename) {
 	include_once($filename);
 }
 
