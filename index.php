@@ -69,7 +69,7 @@
             <hr>
             <div class="as_student">
                 <img src="images/student_icon.png" alt="">
-                <a href="student_reg.html">Register As a Student</a>
+                <a href="student_reg.php">Register As a Student</a>
             </div>
             <hr>
         </div>
