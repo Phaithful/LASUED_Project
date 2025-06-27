@@ -86,7 +86,7 @@
             <hr>
             <div class="as_student">
                 <img src="images/student_icon.png" alt="">
-                <a href="#">Login As a Student</a>
+                <a href="student_signin.php">Login As a Student</a>
             </div>
             <hr>
         </div>

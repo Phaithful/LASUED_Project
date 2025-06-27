@@ -40,8 +40,12 @@ $crossorigin = 'anonymous';
         </h2>
 
         <div>
+<<<<<<< HEAD
             <form id="form1" onsubmit="return false" autocomplete="off" class="container p-4 mt-4">
                 <input type="hidden" name="op" value="Users.registerUser">
+=======
+            <form action="" class="container p-5 mt-4">
+>>>>>>> 213a148d04280124804887e65b9889f20ba22d63
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="fname" class="form-label">First Name</label>
@@ -76,7 +80,7 @@ $crossorigin = 'anonymous';
                     <span class="eye-icon fas fa-thin fa-eye-slash" id="toggleCPassword"></span>  
                 </div>
 
-                <p class="mt-3 sign_in_link">Already a user? <a href="#">Sign in here</a></p>
+                <p class="mt-3 sign_in_link">Already a user? <a href="student_signin.php">Sign in here</a></p>
 
                 <div class="form-check mb-3">
                     <input class="form-check-input check_box" type="checkbox" name="terms" id="flexCheckDefault" required>
