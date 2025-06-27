@@ -57,4 +57,27 @@ class dbobject extends validation
 
         return $this->db_query($sql, false);
     }
+    public function updatePinMissed($matric, $pin_missed)
+    {
+        $matric_safe = mysqli_real_escape_string($this->myconn, $matric);
+        $pin_missed = intval($pin_missed);
+
+        $sql = "UPDATE students SET pin_missed = $pin_missed WHERE matric = '$matric_safe'";
+        return $this->db_query($sql, false);
+    }
+
+    public function lockUser($matric)
+    {
+        $matric_safe = mysqli_real_escape_string($this->myconn, $matric);
+        $sql = "UPDATE students SET user_locked = 1 WHERE matric = '$matric_safe'";
+        return $this->db_query($sql, false);
+    }
+    public function resetLoginStatus($matric)
+    {
+        $matric_safe = mysqli_real_escape_string($this->myconn, $matric);
+        $sql = "UPDATE students SET pin_missed = 0, user_locked = 0 WHERE matric = '$matric_safe'";
+        return $this->db_query($sql, false);
+    }
+
+
 }

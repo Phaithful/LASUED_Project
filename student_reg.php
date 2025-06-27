@@ -40,12 +40,8 @@ $crossorigin = 'anonymous';
         </h2>
 
         <div>
-<<<<<<< HEAD
             <form id="form1" onsubmit="return false" autocomplete="off" class="container p-4 mt-4">
                 <input type="hidden" name="op" value="Users.registerUser">
-=======
-            <form action="" class="container p-5 mt-4">
->>>>>>> 213a148d04280124804887e65b9889f20ba22d63
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="fname" class="form-label">First Name</label>

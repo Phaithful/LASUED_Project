@@ -24,8 +24,8 @@
         </h2>
 
         <div>
-            <form action="" class="container p-5 mt-4">
-
+            <form id="form1" onsubmit="return false" autocomplete="off" class="container p-5 mt-4">
+                <input type="hidden" name="op" value="Users.loginUser">
 
                 <div class="mb-3">
                     <label for="matric" class="form-label">Matric Number</label>
@@ -38,9 +38,9 @@
                     <span class="eye-icon fas fa-thin fa-eye-slash" id="togglePassword"></span>  
                 </div>
 
-                <p class="mt-3 sign_in_link">Not a user? <a href="student_reg.html">Register here</a></p>
+                <p class="mt-3 sign_in_link">Not a user? <a href="student_reg.php">Register here</a></p>
 
-                <input type="submit" class="btn w-100" value="Login" onclick="this.disabled=true; this.form.submit();">
+                <input type="submit" class="btn w-100" value="Login" onclick="loginUser('form1')">
             </form>
 
         </div>
@@ -48,5 +48,53 @@
     
 
     <script src="assets/js/student_signin.js"></script>
+    <script src="js/jquery-3.6.0.min.js" ></script>
+	<script src="js/jquery.blockUI.js" ></script>
+	<script src="js/parsely.js" ></script>
+
+	<script src="js/sweet_alerts.js" ></script>
+	<script src="js/main.js"></script>
+
+
+    	<script>
+		function loginUser(id) {
+			var forms = $('#' + id);
+			forms.parsley().validate();
+			if (forms.parsley().isValid()) {
+				$.blockUI();
+				var data = $("#" + id).serialize();
+				$.ajax({
+					type: "post",
+					url: "utilities_default.php",
+					data: data,
+					dataType: "json",
+					beforeSend: function() {
+						$.blockUI({
+							message: "Processing..... Please wait...",
+						});
+					},
+					success: function(data) {
+						$.unblockUI();
+
+						if (data.response_code == 0) {
+							$("#button").attr("disabled", true);
+							$("#server_mssg").text(data.response_message);
+							setTimeout(() => {
+								window.location = 'index.php';
+							}, 2000);
+						} else {
+							// regenerateCORS();
+							$("#server_mssg").html(data.response_message);
+						}
+					},
+					error: function(data) {
+						// regenerateCORS();
+						$.unblockUI();
+						$("#server_mssg").html("Unable to process request at the moment! Please try again");
+					},
+				});
+			}
+		}
+	</script>
 </body>
 </html>
