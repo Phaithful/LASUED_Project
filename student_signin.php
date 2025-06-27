@@ -38,9 +38,9 @@
                     <span class="eye-icon fas fa-thin fa-eye-slash" id="togglePassword"></span>  
                 </div>
 
-                <p class="mt-3 sign_in_link">Not a user? <a href="student_reg.html">Register here</a></p>
+                <p class="mt-3 sign_in_link">Not a user? <a href="student_reg.php">Register here</a></p>
 
-                <input type="submit" class="btn w-100" value="Login" onclick="this.disabled=true; this.form.submit();">
+                <input type="submit" class="btn w-100" value="Login" onclick="this.disabled=true;">
             </form>
 
         </div>

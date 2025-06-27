@@ -5,40 +5,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginModal = document.getElementById('loginModal');
     const loginBtn = document.getElementById('loginBtn');
 
-    registerBtn.addEventListener('click', () => {
+    // Toggle modals
+    registerBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         modal.classList.toggle('show');
+        loginModal.classList.remove('show'); 
     });
 
-    loginBtn.addEventListener("click", () => {
-        loginModal.classList.toggle("show")
-    })
+    loginBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        loginModal.classList.toggle('show');
+        modal.classList.remove('show'); 
+    });
 
-    // Close modal if clicked outside
-    document.addEventListener('click', function (event) {
-        const modal = document.getElementById('registerModal');
-        const registerBtn = document.getElementById('registerBtn');
-        const loginModal = document.getElementById('loginModal');
-        const loginBtn = document.getElementById('loginBtn');
-        const isClickInside = modal.contains(event.target);
-        const isClickInsideReg = loginModal.contains(event.target);
-        const isButton = event.target === registerBtn;
-        const isRegButton = event.target === loginBtn;
+    // Close login and signup modals if clicked outside
+    document.addEventListener('click', (event) => {
+        const clickedInsideRegister = modal.contains(event.target) || registerBtn.contains(event.target);
+        const clickedInsideLogin = loginModal.contains(event.target) || loginBtn.contains(event.target);
 
-        if (!isClickInside && !isButton && modal.classList.contains('show')) {
+        if (!clickedInsideRegister) {
             modal.classList.remove('show');
         }
 
-        if (!isClickInsideReg && !isRegButton && loginModal.classList.contains('show')) {
+        if (!clickedInsideLogin) {
             loginModal.classList.remove('show');
         }
     });
+    
+
+    const buttons = document.querySelectorAll('.questions_cont button');
+    const answers = document.querySelectorAll('.questions_txt p');
+
+    buttons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+        answers.forEach((ans, i) => {
+            if (i === index) {
+                ans.classList.toggle('active');
+            } else {
+                ans.classList.remove('active');
+            }
+        });
+        });
+    });
 
 });
-
-
-
-
-
-
-
-

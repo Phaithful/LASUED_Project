@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 
 </head>
 
@@ -35,13 +37,13 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#offer">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
                 </ul>
 
@@ -108,7 +110,7 @@
                         Lagos State University of Education's Directorate of Entrepreneurship and Skills Development, in partnership with the Ministry of Education, is transforming education in Lagos. We're building a database, certifying professionals, and empowering students with entrepreneurship. Join us in shaping the future of education, one step at a time.
                     </p>
                     <div class="home_btn">
-                        <button class="btn blue_btn" type="button">Learn More</button>
+                        <button class="btn learn_more" type="button">Learn More</button>
                         <button class="btn get_started" type="button">Get Started</button>
                     </div>
                 </div>
@@ -183,7 +185,7 @@
 
 
     <!-- What we Offer Section -->
-    <section class="offer">
+    <section class="offer" id="offer">
         <h1>
             What We Offer
         </h1>
@@ -276,15 +278,260 @@
     </section>
 
     <!-- contact section -->
-    <section class="contact">
+    <section class="contact" id="contact">
+
+        <div class="container py-5" style="width: 80%;">
+            <div class="row">
+
+                <!-- Left Contact (70%) -->
+                <div class="col-12 col-md-7 mb-4 left_contact">
+                    <h1>CONTACT US</h1>
+                    <h4>Get in touch with Us</h4>
+
+                    <form action="">
+                        <div class="row g-3">
+                            <!-- First + Last Name -->
+                            <div class="col-md-6">
+                                <input type="text" name="first_name" class="form-control acc_form" placeholder="First Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="last_name" class="form-control acc_form " placeholder="Last Name">
+                            </div>
+
+                            <!-- Phone + Email -->
+                            <div class="col-md-6">
+                                <input type="tel" name="phone" class="form-control acc_form" placeholder="Phone Number">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email" class="form-control acc_form" placeholder="Email">
+                            </div>
+
+                            <!-- Message -->
+                            <div class="col-12">
+                                <textarea name="message" class="form-control " rows="9" placeholder="Your Message"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="submit_div col-12" >
+                                <input type="submit" class="btn submit_btn" value="SUBMIT NOW" onclick="this.disabled=true;">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right Contact Info (30%) -->
+                <div class="col-12 col-md-5 right_contact">
+                    <h1>Contact Info</h1>
+
+                    <div class="contact_info d-flex flex-column gap-3">
+
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="images/location.png" alt="" style="width: 40px; height: 45px">
+                            <div>
+                                <h6 class="mb-1">Office Address</h6>
+                                <p class="mb-0">No 23, Ibeju-lekki road<br>45, BA Ikoyi street</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="images/phone.png" alt="" style="width: 40px;">
+                            <div>
+                                <h6 class="mb-1">Telephone Info</h6>
+                                <p class="mb-0">+234 803 456 7893<br>+234 709 345 1234</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="images/email.png" alt="" style="width: 40px;">
+                            <div>
+                                <h6 class="mb-1">Email</h6>
+                                <p class="mb-0">Lagostateedu@gmail.com<br>ministryofedu@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="images/clock.png" alt="" style="width: 40px;">
+                            <div>
+                                <h6 class="mb-1">Opening Hours</h6>
+                                <p class="mb-0">Mon - Fri: 08:00 - 16:00<br>Sat - Sun: 09:30 - 17:00</p>
+                            </div>  
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </section>
+
+
+    <section class="questions py-5 px-5 px-md-1">
+
+        <div class="container py-5">
+
+            <div class="row">
+
+                <div class="col-12 col-md-5 mb-4 questions_left">
+                    <h1>
+                        Frequently Asked Questions
+                    </h1>
+
+                    <p>
+                        Explore our Frequently Asked Questions (FAQ) section for quick answers to common queries. If you have more specific inquiries or additional questions, please don't hesitate to contact us. We're here to assist you further.
+                    </p>
+
+                    <button class="btn ">Contact Us</button>
+                </div>
+
+                <div class="col-12 col-md-7 questions_right"> 
+
+                    <div class="questions_cont">
+                        <div class="questions_txt">
+                            <h4>What payment methods are accepted for registration?</h4>
+                            <p id="q1">We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options.</p>
+                        </div>
+                        <button id="b1">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                    </div>
+
+                    <div class="questions_cont">
+                        <div class="questions_txt">
+                            <h4>What happens if I'm overcharged or need a refund?</h4>
+                            <p id="q2">We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options.</p>
+                        </div>
+                        <button id="b2">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                        
+                    </div>
+
+                    <div class="questions_cont">
+                        <div class="questions_txt">
+                            <h4>How can I register on this website?</h4>
+                            <p id="q3">We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options.</p>
+                        </div>
+                        <button id="b3">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                    </div>
+
+                    <div class="questions_cont">
+                        <div class="questions_txt">
+                            <h4>What should I do if I need help with my account?</h4>
+                            <p id="q4">We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options.</p>
+                        </div>
+                        <button id="b4">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                    </div>
+
+                    <div class="questions_cont">
+                        <div class="questions_txt">
+                            <h4>Is there a mobile app available for this website?</h4>
+                            <p id="q5">We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options.</p>
+                        </div>
+                        <button id="b5">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                    </div>
+
+                    <div class="questions_cont">
+                        <div class="questions_txt">
+                            <h4>How is my personal information protected on this website?</h4>
+                            <p id="q6">We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options.</p>
+                        </div>
+                        <button id="b6">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+        
+    </section>
+
+
+    <footer>
+
+        <div class="top_footer ">
+            <h1>
+                Get the latest DESD news delivered to your inbox
+            </h1>
+
+            <div class="sub_div">
+                <input type="email" name="sub_email" placeholder="Your Email">
+                <button>
+                    Subscribe
+                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="container bottom_footer">
+
+            <div class="row">
+
+                <div class="col-12 col-md-4 footer_name">
+                    <div class="footer_info">
+                        <div>
+                            <h2>MINISTRY</h2>
+                            <p>OF EDUCATION</p>
+                        </div>
+                        <img src="images/lasued_logo3.png" alt="">
+                    </div>
+
+                    <div style="padding-right: 70px;">
+                        <h2>LAGOS STATE</h2>
+                        <p>UNIVERSITY OF EDUCATION</p>
+                    </div>
+
+                </div>    
+
+                <div class="footer_links col-12 col-md-2">
+                    <h2>Services</h2>
+                    <h3>Registration</h3>
+                    <h3>Empowerment</h3>
+                    <h3>support</h3>
+                    <h3>Entrepreneurship</h3>
+                    <h3>Trainings</h3>
+                </div>
+
+                <div class="footer_links col-12 col-md-2">
+                    <h2>Information</h2>
+                    <h3>Competitions</h3>
+                    <h3>Registration</h3>
+                    <h3>Training</h3>
+                    <h3>Contact Us</h3>
+                </div>
+
+                <div class="footer_links col-12 col-md-2 ">
+                    <h2>Quick Links</h2>
+                    <h3>Vision and mission</h3>
+                    <h3>Gallery</h3>
+                    <h3>Contact</h3>
+                </div>
+
+                <div class="footer_links col-12 col-md-2">
+                    <h2>Who we are</h2>
+                    <h3>Identity</h3>
+                    <h3>Background</h3>
+                    <h3>Overview</h3>
+                    <h3>LASEID-DESD</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
     
-
-
-
-
-
 
 
 
