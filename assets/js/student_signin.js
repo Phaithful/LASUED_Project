@@ -13,16 +13,16 @@ togglePassword.addEventListener('click', function () {
     this.classList.toggle('fa-eye-slash');
 });
 
-toggleConfirmPassword.addEventListener("click", function(){
+// toggleConfirmPassword.addEventListener("click", function(){
 
-    const type = cPasswordInput.getAttribute("type") === 'password' ? 'text' : 'password';
-    cPasswordInput.setAttribute('type', type);
+//     const type = cPasswordInput.getAttribute("type") === 'password' ? 'text' : 'password';
+//     cPasswordInput.setAttribute('type', type);
 
-    // Toggle icon
-    this.classList.toggle('fa-eye');
-    this.classList.toggle('fa-eye-slash');
+//     // Toggle icon
+//     this.classList.toggle('fa-eye');
+//     this.classList.toggle('fa-eye-slash');
 
-})
+// })
 
 
 

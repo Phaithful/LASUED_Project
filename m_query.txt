@@ -1,1 +1,1 @@
-INSERT INTO `email_subscriptions` (`email`,`subscribed_at`) VALUES ('josephsub@gmail.com','2025-06-27 16:03:54')
+INSERT INTO `students` (`firstname`,`lastname`,`email`,`matric`,`password`,`terms`,`created`) VALUES ('Frank','Jude','frankjude@gmail.com','PHY/12/3232','0x49cb77314556b5f5','1','2025-07-03 10:49:16')

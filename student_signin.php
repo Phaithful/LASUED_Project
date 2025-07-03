@@ -25,7 +25,7 @@
 
         <div>
             <form id="form1" onsubmit="return false" autocomplete="off" class="container p-5 mt-4">
-                <input type="hidden" name="op" value="Users.loginUser">
+                <input type="hidden" name="op" value="Users.loginUser" />
 
                 <div class="mb-3">
                     <label for="matric" class="form-label">Matric Number</label>
@@ -41,6 +41,7 @@
                 <p class="mt-3 sign_in_link">Not a user? <a href="student_reg.php">Register here</a></p>
 
                 <input type="submit" class="btn w-100" value="Login" onclick="loginUser('form1')">
+				<div id="server_mssg"></div>
             </form>
 
         </div>
